@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MainContextProvider from './context/MainContext';
 import Auth from './pages/Auth';
 import Main from './pages/Main';
+import Update from './pages/Update';
 
 const Routes = () => {
     return (
@@ -11,6 +12,7 @@ const Routes = () => {
                 <Switch>
                     <Route exact path ="/auth" component={Auth}/>
                     <Route exact path ="/" component={Main}/>
+                    <Route exact path ="/update/:docId" component={Update}/>
                 </Switch>
             </BrowserRouter>
         </MainContextProvider>
